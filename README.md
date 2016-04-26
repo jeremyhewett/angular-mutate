@@ -8,7 +8,14 @@ Performs a deep mutation of an existing (destintation) object to equal a given (
 
 **Note**: this is basically the exact opposite of how Redux reducers perform modifications to the state object. Instead of ensuring no mutation, `mutate-object` uses mutation wherever possible to avoid creating new objects/arrays.
 
-## Example
+## Install
+**NPM**  
+`npm install https://github.com/jeremyhewett/mutate-object.git#v1.0.0`
+
+**Bower**  
+`bower install https://github.com/jeremyhewett/mutate-object.git#v1.0.0`
+
+### Example
 ```
 var oldState = {
   title: 'Old',
@@ -39,3 +46,10 @@ expect(oldState.user1).toBe(user1); //instead of creating new arrays/objects.
 AngularJS watches the view model and re-render the view when the associated model changes. The Redux pattern disallows any state mutation and forces any small change in the state to "bubble" up and cause all parent objects to be re-created. If a new Redux state is applied directly to an angular view model, the entire hiearchy will be re-rendered because AngularJS will see that all the parent objects have changed. `mutate-object` solves this problem by preserving any unmodified parts of the view model and therefore avoiding all unnecessary re-rendering.
 
 It would also be useful in an architecture where multiple modules are holding on to references to a shared state object. Naively updating that state would cause the held references to become stale. Using `mutate-object` would not change the shared objects themseleves, only the data within them.
+
+## Arguments
+| Param             | Type   | Details                                                                                                                                                                                                                    |
+|-------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| oldObject         | object | The destination object to be mutated                                                                                                                                                                                       |
+| newObject         | object | The new object that the old object should be mutated to equal                                                                                                                                                              |
+| preserveRootProps | bool (optional)   | `true` to prevent deleting undefined props at the root level. Eg. (in a simple AngularJS controller context) `mutateObject($scope, newState, true)` would avoid deleting controller functions and other values on the scope. |
