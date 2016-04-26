@@ -3,7 +3,7 @@
 # mutate-object
 Performs a deep mutation of an existing object to equal a new object. Similar to `angular.merge` but with one critical difference: the destination object will always end up equal to the source object. This means:
  1. Values that are undefined in the source object **will be removed** from the destination object.
- 2. A value that is an array in the source and an object in the destination (or vice versa) will not simply be mutated, because the types are different. A new instance of the correct type will be created instead.
+ 2. A value that is an array in the source but an object in the destination (or vice versa) will not simply be mutated, because the types are different. A new instance of the correct type will be created instead.
 
 **Note**: this is basically the exact opposite of Redux reducers. Instead of ensuring no mutation, `mutate-object` uses mutation wherever possible to avoid creating new objects.
 
