@@ -1,4 +1,4 @@
-var mutate = require('../mutate.js');
+var mutate = require('../mutate-object.js');
 
 describe('mutate', function() {
 
