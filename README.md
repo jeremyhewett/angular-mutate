@@ -10,7 +10,7 @@ Performs a deep mutation of an existing (destintation) object to equal a given (
 
 ## Install
 **NPM**  
-`npm install https://github.com/jeremyhewett/mutate-object.git#v1.0.0`
+`npm install mutate-object`
 
 **Bower**  
 `bower install https://github.com/jeremyhewett/mutate-object.git#v1.0.0`
