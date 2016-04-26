@@ -1,8 +1,8 @@
 {
   "name": "mutate-object",
   "version": "1.0.0",
-  "description": "Mutates ObjectA to equal ObjectB",
-  "main": "index.js",
+  "description": "Performs a deep mutation of an existing object to equal a new object",
+  "main": "mutate-object.js",
   "scripts": {
     "test": "node ./node_modules/jasmine-node/bin/jasmine-node test/"
   },
