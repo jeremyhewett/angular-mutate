@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/jeremy_hewett/mutate-object/branches/master/badge.svg)](https://semaphoreci.com/jeremy_hewett/mutate-object)
+
 # mutate-object
 Performs a deep mutation of an existing object to equal a new object. Similar to `angular.merge` but with one critical difference: the destination object will always end up equal to the source object. This means:
  1. Values that are undefined in the source object **will be removed** from the destination object.
