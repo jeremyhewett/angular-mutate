@@ -1,6 +1,6 @@
 {
   "name": "mutate-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Performs a deep mutation of an existing object to equal a new object",
   "main": "mutate-object.js",
   "scripts": {
