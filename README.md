@@ -16,7 +16,7 @@ Performs a deep mutation of an existing (destintation) object to equal a given (
 `bower install https://github.com/jeremyhewett/mutate-object.git`
 
 ### Example
-```
+```javascript
 var oldState = {
   title: 'Old',
   todos: [{ id: 1, name: 'do it' }, { id: 2, name: 'do it again' }],
@@ -50,6 +50,6 @@ It would also be useful in an architecture where multiple modules are holding on
 ## Arguments
 | Param             | Type   | Details                                                                                                                                                                                                                    |
 |-------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| oldObject         | object | The destination object to be mutated                                                                                                                                                                                       |
-| newObject         | object | The new object that the old object should be mutated to equal                                                                                                                                                              |
-| preserveRootProps | bool (optional)   | `true` to prevent deleting undefined props at the root level. Eg. (in a simple AngularJS controller context) `mutateObject($scope, newState, true)` would avoid deleting controller functions and other values on the scope. |
+| `oldObject`         | object | The destination object to be mutated                                                                                                                                                                                       |
+| `newObject`         | object | The new object that the old object should be mutated to equal                                                                                                                                                              |
+| `preserveRootProps` | bool (optional)   | `true` to prevent deleting undefined props at the root level. Eg. (in a simple AngularJS controller context) `mutateObject($scope, newState, true)` would avoid deleting controller functions and other values on the scope. |
